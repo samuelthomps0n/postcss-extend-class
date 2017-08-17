@@ -1,10 +1,8 @@
-# PostCSS Prepend Selector [![Build Status][ci-img]][ci]
+# PostCSS Extend Class
 
-[PostCSS] plugin Prepend selector for each rule.
+[PostCSS] plugin extend classes for each rule.
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/ledniy/postcss-prepend-selector.svg
-[ci]:      https://travis-ci.org/ledniy/postcss-prepend-selector
 
 ```css
 .foo {
@@ -17,11 +15,11 @@
 ```
 
 ```css
-.selector .foo {
+.__prefix__foo {
   /* Output example */
 }
 
-.selector .foo, .selector .bar {
+.__prefix__foo, .__prefix__bar {
   /* Output example */
 }
 ```
@@ -29,7 +27,7 @@
 ## Usage
 
 ```js
-postcss([ require('postcss-prepend-selector')( { selector: '.selector ' } ) ])
+postcss([ require('postcss-extend-class')( { prefix: '__prefix__' } ) ])
 ```
 
 See [PostCSS] docs for examples for your environment.

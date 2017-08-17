@@ -1,20 +1,20 @@
 {
-  "name": "postcss-prepend-selector",
-  "version": "0.3.0",
-  "description": "PostCSS plugin Prepend selector for each rule",
+  "name": "postcss-extend-class",
+  "version": "0.4.0",
+  "description": "PostCSS plugin extend class name for each class rule",
   "keywords": [
     "postcss",
     "css",
     "postcss-plugin",
-    "postcss-prepend-selector"
+    "postcss-extend-class"
   ],
-  "author": "Vladislav Gladkiy <ledniy@gmail.com>",
+  "author": "Samuel Thompson <sam@samuelthompson.co.uk>",
   "license": "MIT",
-  "repository": "ledniy/postcss-prepend-selector",
+  "repository": "samuelthomps0n/postcss-extend-class",
   "bugs": {
-    "url": "https://github.com/ledniy/postcss-prepend-selector/issues"
+    "url": "https://github.com/samuelthomps0n/postcss-extend-class/issues"
   },
-  "homepage": "https://github.com/ledniy/postcss-prepend-selector",
+  "homepage": "https://github.com/samuelthomps0n/postcss-extend-class",
   "dependencies": {
     "postcss": "^5.2.14"
   },

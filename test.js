@@ -11,28 +11,21 @@ function run(t, input, output, opts = {}) {
         });
 }
 
-const selector = '.selector ';
+const prefix = '__prefix__';
 
-test('Prepend selector', t =>
-  run(t, 'a{ }', '.selector a{ }', { selector })
-);
 
-test('Prepend selectors', t =>
-  run(t, 'a, .example{ }', '.selector a, .selector .example{ }', { selector })
+test('Prepend prefixs', t =>
+  run(t, '.example{ }', '.__prefix__example{ }', { prefix })
 );
 
 test('Should not prepend if class is already there', t =>
-  run(t, '.selector.example{ }', '.selector.example{ }', { selector })
+  run(t, '.__prefix__example{ }', '.__prefix__example{ }', { prefix })
 );
 
-test('Should no preprend if selector is body', t =>
-    run(t, 'body{ }', 'body{ }', { selector })
-);
-
-test('Should no preprend if selector is html', t =>
-    run(t, 'html{ }', 'html{ }', { selector })
+test('Should skip body and html rules', t =>
+    run(t, 'html,body{ }', 'html,body{ }', { prefix })
 );
 
 test('Skip keyframe rules', t =>
-  run(t, '0%, from {} 100%, to {}', '0%, from {} 100%, to {}', { selector })
+  run(t, '0%, from {} 100%, to {}', '0%, from {} 100%, to {}', { prefix })
 );
